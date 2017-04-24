@@ -1,10 +1,9 @@
-import 'mdn-polyfills/Object.assign'
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
+import { DialogModule } from '@progress/kendo-angular-dialog';
 
 // Import the Animations module
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,7 +22,8 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
 
         // Register the modules
         BrowserAnimationsModule,
-        ButtonsModule
+        ButtonsModule,
+        DialogModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -1,3 +1,11 @@
 <h1>{{title}}</h1>
 
 <button kendoButton (click)="onButtonClick()" [primary]="true">My Kendo UI Button</button>
+
+<kendo-dialog title="Please confirm" *ngIf="opened" (close)="close('cancel')">
+  <p style="margin: 30px; text-align: center;">Are you sure you want to continue?</p>
+  <kendo-dialog-actions>
+    <button kendoButton (click)="close('no')">No</button>
+    <button kendoButton (click)="close('yes')" primary="true">Yes</button>
+  </kendo-dialog-actions>
+</kendo-dialog>
